@@ -1,24 +1,54 @@
-.header {
+.Container {
     display: flex;
+    flex-direction: column;
+    margin: 30px 100px;
     justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 225, 225);
+    font-family: Arial;
 }
 
-.content {
+.Header {
     display: flex;
     justify-content: center;
+    height: 40px;
+    padding: 20px;
+    font-family: Helvetica;
+    font-size: 18px;
+
+}
+
+.Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
     display: flex;
-    border: 5px solid;
+    border: 2px solid;
     border-radius: 5px;
     flex-direction: column;
 }
 
 input {
-    border-bottom: 2px aqua;
+    display: flex;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 0px 10px;
 }
 
-#login_form {
+#Login_Form {
     width: 320px;
+}
+
+#Login_Button {
+    width: 50px;
+    margin:5px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
