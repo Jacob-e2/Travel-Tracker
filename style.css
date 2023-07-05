@@ -1,0 +1,24 @@
+.header {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    border: 5px solid;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+input {
+    border-bottom: 2px aqua;
+}
+
+#login_form {
+    width: 320px;
+}
