@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Travel Tracker - Login</title>
+  <title>Travel Tracker - Create Account</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -41,9 +41,10 @@
     <?php
     $name = "";
     $email = "";
-    $password = "";
+    $password = $_POST["password"];
+    $repeat_password = $_POST["repeat_password"];
 
-    if ($_POST["password"] == $_POST["repeat_password"]) {
+    if ($password == $repeat_password) {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = clean($_POST["email"]);
         $password = clean($_POST["password"]);
