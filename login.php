@@ -25,6 +25,9 @@
                 <button type="submit" id="Login_Button">Login</button>
 
             </form>
+
+            <a href="create.php">Create Account</a>
+
         </div>
     </div>
 
