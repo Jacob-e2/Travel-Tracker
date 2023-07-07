@@ -26,7 +26,10 @@
                 <label for="password"><b>Password</b></label>
                 <input type="password" id="password" name="password" required>
 
-                <button type="submit" id="Create_Button">Login</button>
+                <label for="repeat_password"><b>Repeat Password</b></label>
+                <input type="password" id="repeat_password" name="repeat_password" required>
+
+                <button type="submit" id="Create_Button">Create Account</button>
 
             </form>
         </div>
@@ -40,11 +43,16 @@
     $email = "";
     $password = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_POST["password"] == $_POST["repeat_password"]) {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = clean($_POST["email"]);
         $password = clean($_POST["password"]);
         $name = clean($_POST["name"]);
-
+        }
+    } else {
+        echo '<script language="javascript">';
+        echo 'alert("Passwords do not match")';
+        echo '</script>';
     }
 
     function clean($data) {
